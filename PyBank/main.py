@@ -57,3 +57,13 @@ print("Total: " + str(Total_PL))
 print("Average Change: " + str(f"${Average_Change}"))
 print(f"Greatest Increase in Profits: {Max_Increase_Date} ${Max_Increase}")
 print(f"Greatest decrease in Profits: {Max_Decrease_Date} ${Max_Decrease}")
+
+# output to a txt file
+with open("PyBank.txt", "w") as BankResult:
+    BankResult.write("Financial Analysis \n")
+    BankResult.write("----------------------------- \n")
+    BankResult.write("Total Months: " + str(Num_Months) + "\n")
+    BankResult.write("Total: " + str(Total_PL) + "\n")
+    BankResult.write("Average Change: " + str(f"${Average_Change}") + "\n")
+    BankResult.write(f"Greatest Increase in Profits: {Max_Increase_Date} ${Max_Increase}" + "\n")
+    BankResult.write(f"Greatest decrease in Profits: {Max_Decrease_Date} ${Max_Decrease}")
